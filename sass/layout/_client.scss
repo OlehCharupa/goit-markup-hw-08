@@ -1,10 +1,17 @@
 .client-list {
   display: flex;
+  flex-wrap: wrap;
 
   .item {
-    width: calc((100% - 30px * 5) / 6);
-    + .item {
-      margin-left: 30px;
+    width: calc((100% - 30px * 1) / 2);
+    // width: calc((100% - 30px * 5) / 6);
+
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
     }
   }
 }

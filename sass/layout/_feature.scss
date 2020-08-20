@@ -1,21 +1,21 @@
 .feature-section {
-  display: flex;
+  // display: flex;
   padding-bottom: 0;
 }
 
 .feature-list {
-  display: flex;
+  // display: flex;
 
   .text {
     margin: 0;
   }
 
   .item {
-    display: flex;
-    flex-direction: column;
-    width: 270px;
+    // display: flex;
+    // flex-direction: column;
+    //. width: 270px;
     + .item {
-      margin-left: 30px;
+      //  margin-left: 30px;
     }
   }
 }
@@ -32,7 +32,7 @@
   margin-bottom: 30px;
 }
 .antenna {
-  display: flex;
+  // display: flex;
   width: 70px;
   height: 70px;
 }

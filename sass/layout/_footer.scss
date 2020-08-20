@@ -3,16 +3,17 @@
   padding-bottom: 60px;
   color: $title-text-white;
   background-color: #2f303a;
+  text-align: center;
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
+  // .container {
+  //   justify-content: space-between;
+  //   align-items: baseline;
+  // }
   .subscription {
-    display: flex;
-    width: 570px;
-    flex-direction: column;
+    // display: flex;
+    // width: 570px;
+    // flex-direction: column;
+    width: 100%;
     .text {
       font-weight: 700;
       font-size: 14px;
@@ -25,7 +26,7 @@
 }
 
 .address {
-  width: 270px;
+  width: 100%;
 
   .home-page {
     color: $title-text-white;
@@ -44,6 +45,7 @@
     }
   }
   .link {
+    display: block;
     margin-top: 9px;
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
@@ -56,9 +58,10 @@
 }
 
 .address-text {
+  display: block;
   font-style: normal;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   .text {
     margin-top: 8px;
   }
@@ -73,24 +76,34 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-.container > .socials-link {
-  width: 270px;
-}
+// .container > .socials-link {
+
+// width: 270px;
+// }
+// .socials-list {
+//   display: flex;
+//   .socials-link > & .item + .item {
+//     margin-left: 10px;
+//   }
+// }
+
 .socials-list {
   display: flex;
-  .socials-link > & .item + .item {
-    margin-left: 10px;
-  }
+  justify-content: center;
 }
 
 .footer-item {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
   display: flex;
-  width: 44px;
-  height: 44px;
   justify-content: center;
   align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  &:not(:nth-last-child(-n + 1)) {
+    margin-right: 10px;
+  }
 }
 
 .footer-icon {
@@ -99,10 +112,10 @@
   height: 20px;
 }
 
-.subscription-box {
-  display: flex;
-  justify-content: space-between;
-}
+// .subscription-box {
+//   display: flex;
+//   justify-content: space-between;
+// }
 
 .email-input {
   width: 100%;
@@ -118,8 +131,8 @@
   font-size: 16px;
   line-height: 1.25;
 
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
   letter-spacing: 0.03em;
 
   color: rgba(255, 255, 255, 0.6);
@@ -136,7 +149,7 @@
   font-size: 16px;
   line-height: 1.87;
 
-  display: flex;
+  // display: flex;
   letter-spacing: 0.06em;
   color: $title-text-white;
 
