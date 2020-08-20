@@ -1,0 +1,38 @@
+.feature-section {
+  display: flex;
+  padding-bottom: 0;
+}
+
+.feature-list {
+  display: flex;
+
+  .text {
+    margin: 0;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    + .item {
+      margin-left: 30px;
+    }
+  }
+}
+
+.icon-feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.antenna {
+  display: flex;
+  width: 70px;
+  height: 70px;
+}
