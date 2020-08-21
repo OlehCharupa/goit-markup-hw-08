@@ -373,35 +373,10 @@ button {
 }
 
 .container {
+  max-width: 450px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-}
-
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.section .section-title {
-  margin-top: 0;
-  margin-bottom: 50px;
-  color: #212121;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-}
-
-.section .title {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: #212121;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
 }
 
 /*================= логотип ==================*/
@@ -422,13 +397,6 @@ button {
 
 .logo .text {
   color: #2196f3;
-}
-
-@media screen and (min-width: 480px) {
-  .logo {
-    margin-top: 16px;
-    margin-bottom: 16px;
-  }
 }
 
 /*  ============= Модальное Окно ====================*/
@@ -662,37 +630,77 @@ button {
   fill: #ffffff;
 }
 
-/* ==================header ===========================*/
-.main-nav {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
 .page-header {
   border-bottom: 1px solid #ececec;
 }
 
-/*=============== ссылки навигации ================*/
-.site-nav {
-  margin-left: 85px;
+.main-nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.site-nav .item + .item {
-  margin-left: 50px;
+.header-menu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 60px;
+  padding-right: 140px;
+  padding-bottom: 60px;
+  padding-left: 140px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(-120%);
+}
+
+.header-menu.is-open {
+  transform: translateY(0);
+}
+
+.button-burger {
+  display: inline-flex;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+.button-burger:focus {
+  outline: none;
+}
+
+.button-burger .menu-burger-close {
+  display: none;
+}
+
+.button-burger.is-open .menu-burger-close {
+  display: block;
+}
+
+.button-burger.is-open .menu-burger-open {
+  display: none;
+}
+
+.menu-burger-icon {
+  fill: #212121;
+}
+
+.menu-burger-icon:hover, .menu-burger-icon:focus {
+  fill: #2196f3;
 }
 
 .site-nav .link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: #212121;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
   position: relative;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.167;
+  letter-spacing: 0.02em;
+  color: #212121;
 }
 
 .site-nav .link::after {
@@ -704,17 +712,9 @@ button {
   border-radius: 2px;
   position: absolute;
   right: 0;
-  bottom: -1px;
+  bottom: -3px;
   opacity: 0;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.site-nav .link:hover, .site-nav .link:focus {
-  color: #2196f3;
-}
-
-.site-nav .link:hover::after, .site-nav .link:focus::after {
-  opacity: 1;
 }
 
 .current .link {
@@ -725,43 +725,27 @@ button {
   opacity: 1;
 }
 
-.contact-nav {
-  margin-left: auto;
+.site-nav .item:not(:nth-last-child(-n + 1)) {
+  margin-bottom: 40px;
 }
 
-.contact-nav .item + .item {
-  margin-left: 30px;
+.menu-nav {
+  margin-bottom: 60px;
 }
 
 .contact-nav .link {
+  display: block;
   color: #757575;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-nav .link:hover, .contact-nav .link:focus {
-  color: #2196f3;
-}
-
-.link-icon {
+.contact-nav .link .link-icon {
   fill: currentColor;
   vertical-align: middle;
-}
-
-.icon-envelope {
-  width: 16px;
-  height: 11px;
   margin-right: 10px;
 }
 
-.icon-smartphone {
-  width: 10px;
-  height: 15px;
-  margin-right: 10px;
+.contact-nav .item:not(:nth-last-child(-n + 1)) {
+  margin-bottom: 16px;
 }
 
 .hero {
