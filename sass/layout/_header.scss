@@ -17,9 +17,7 @@
   right: 0;
   text-align: center;
   padding-top: 60px;
-  padding-right: 140px;
   padding-bottom: 60px;
-  padding-left: 140px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
     0px 1px 3px rgba(0, 0, 0, 0.16);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -38,29 +36,16 @@
   &:focus {
     outline: none;
   }
+  & .menu-burger-close {
+    display: none;
+  }
+  &.is-open .menu-burger-close {
+    display: block;
+  }
+  &.is-open .menu-burger-open {
+    display: none;
+  }
 }
-.button-burger .menu-burger-close {
-  display: none;
-}
-.button-burger.is-open .menu-burger-close {
-  display: block;
-}
-.button-burger.is-open .menu-burger-open {
-  display: none;
-}
-
-//  position: relative;
-//   z-index: 100;
-//   background-color: transparent;
-//   border: none;
-//   height: 40px;
-
-//   &-close {
-//     display: none;
-
-//     .menu-btn.is-open & {
-//       display: block;
-//     }
 
 .menu-burger-icon {
   fill: $title-text-color;
