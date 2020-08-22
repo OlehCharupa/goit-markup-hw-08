@@ -670,7 +670,6 @@ button {
 }
 
 .header-menu {
-  text-align: center;
   background: #ffffff;
 }
 
@@ -680,6 +679,7 @@ button {
     position: absolute;
     z-index: 10;
     top: 60px;
+    text-align: center;
     left: 0;
     right: 0;
     padding-top: 60px;
