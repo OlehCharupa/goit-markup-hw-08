@@ -390,6 +390,12 @@ button {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
 /*================= логотип ==================*/
 .logo {
   display: inline-block;
@@ -397,17 +403,22 @@ button {
   font-family: Raleway;
   font-weight: 700;
   font-size: 24px;
-  line-height: 1.2;
+  line-height: 1.192;
   text-decoration: none;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.logo:hover, .logo:focus {
-  color: #2196f3;
 }
 
 .logo .text {
   color: #2196f3;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 26px;
+  }
+  .logo:hover, .logo:focus {
+    color: #2196f3;
+  }
 }
 
 /*  ============= Модальное Окно ====================*/
@@ -433,7 +444,6 @@ button {
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  width: 100%;
 }
 
 .is-hidden .modal-open-content {
@@ -663,18 +673,18 @@ button {
 @media screen and (min-width: 768px) {
   .main-nav {
     justify-content: center;
-    align-items: center;
-    padding-top: 21px;
-    padding-bottom: 21px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
-}
-
-.header-menu {
-  background: #ffffff;
+  .header-menu {
+    display: flex;
+    margin-left: 85px;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .header-menu {
+    background: #ffffff;
     display: none;
     position: absolute;
     z-index: 10;
@@ -686,16 +696,8 @@ button {
     padding-bottom: 60px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
   }
-}
-
-.header-menu.is-open {
-  display: block;
-}
-
-@media screen and (min-width: 768px) {
-  .header-menu {
-    display: flex;
-    margin-left: 85px;
+  .is-open {
+    display: block;
   }
 }
 
@@ -744,6 +746,10 @@ button {
   line-height: 1.167;
   letter-spacing: 0.02em;
   color: #212121;
+}
+
+.site-nav .link:hover {
+  color: #2196f3;
 }
 
 .site-nav .link::after {
@@ -802,10 +808,15 @@ button {
 @media screen and (min-width: 768px) {
   .menu-nav {
     margin-bottom: 0;
-    margin-right: 80px;
+    margin-right: 60px;
     display: flex;
-    justify-content: center;
     align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .menu-nav {
+    margin-right: 300px;
   }
 }
 
@@ -823,19 +834,48 @@ button {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .contact-nav .link {
+    font-size: 14px;
+  }
+  .contact-nav .link:hover, .contact-nav .link:focus {
+    color: #2196f3;
+  }
+}
+
 .contact-nav .link .link-icon {
   fill: currentColor;
   vertical-align: middle;
   margin-right: 10px;
 }
 
-.contact-nav .item:not(:nth-last-child(-n + 1)) {
-  margin-bottom: 16px;
+@media screen and (max-width: 767px) {
+  .contact-nav .item:not(:nth-last-child(-n + 1)) {
+    margin-bottom: 16px;
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
   .contact-nav .item:not(:nth-last-child(-n + 1)) {
     margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-nav .item:not(:nth-last-child(-n + 1)) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-nav {
+    justify-content: start;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .main-nav .contact-nav {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -907,6 +947,17 @@ button {
   height: 70px;
 }
 
+@media screen and (max-width: 1199px) {
+  .work {
+    display: none;
+    padding-top: 0px;
+  }
+}
+
+.work-list {
+  display: flex;
+}
+
 .work-list .title {
   margin-top: 0;
   margin-bottom: 0;
@@ -924,11 +975,6 @@ button {
 
 .work-list .item {
   position: relative;
-}
-
-.work {
-  padding-top: 0px;
-  display: none;
 }
 
 .team {

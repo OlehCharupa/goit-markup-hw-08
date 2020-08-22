@@ -9,17 +9,22 @@
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+  .main-nav {
     justify-content: center;
-    align-items: center;
-    padding-top: 21px;
-    padding-bottom: 21px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .header-menu {
+    display: flex;
+    margin-left: 85px;
   }
 }
-.header-menu {
-  background: #ffffff;
 
-  @media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
+  .header-menu {
+    background: #ffffff;
     display: none;
     position: absolute;
     z-index: 10;
@@ -37,10 +42,6 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .header-menu {
-    display: flex;
-    margin-left: 85px;
-  }
 }
 
 .button-burger {
@@ -80,6 +81,9 @@
   line-height: 1.167;
   letter-spacing: 0.02em;
   color: $title-text-color;
+  &:hover {
+    color: $accent-color;
+  }
   &::after {
     display: block;
     width: -webkit-fill-available;
@@ -92,7 +96,9 @@
     bottom: -3px;
     opacity: 0;
   }
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+  .site-nav .link {
     font-size: 14px;
     line-height: 1.142;
     &::after {
@@ -101,7 +107,6 @@
     }
   }
 }
-
 @media screen and (min-width: 768px) {
   .site-nav {
     display: flex;
@@ -125,10 +130,12 @@
   margin-bottom: 60px;
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
-    margin-right: 80px;
+    margin-right: 60px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    @media screen and (min-width: 1200px) {
+      margin-right: 300px;
+    }
   }
 }
 .contact-nav .link {
@@ -140,19 +147,44 @@
   @media screen and (min-width: 768px) {
     font-size: 12px;
   }
-
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
   .link-icon {
     fill: currentColor;
     vertical-align: middle;
     margin-right: 10px;
   }
 }
-.contact-nav .item:not(:nth-last-child(-n + 1)) {
-  margin-bottom: 16px;
+@media screen and (max-width: 767px) {
+  .contact-nav .item:not(:nth-last-child(-n + 1)) {
+    margin-bottom: 16px;
+  }
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
   .contact-nav .item:not(:nth-last-child(-n + 1)) {
     margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact-nav .item:not(:nth-last-child(-n + 1)) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-nav {
+    justify-content: start;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    .contact-nav {
+      display: flex;
+      align-items: center;
+    }
   }
 }
 
