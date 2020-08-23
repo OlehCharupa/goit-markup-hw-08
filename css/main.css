@@ -422,6 +422,13 @@ button {
   text-transform: uppercase;
 }
 
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 /*================= логотип ==================*/
 .logo {
   display: inline-block;
@@ -958,7 +965,7 @@ button {
     display: inline-block;
   }
   .feature-list .item {
-    flex-basis: 450px;
+    width: 100%;
   }
 }
 
@@ -972,10 +979,31 @@ button {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1169px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .feature-list {
     display: flex;
     flex-wrap: wrap;
+  }
+  .feature-list .item {
+    width: calc((100% - 30px * 1) / 2);
+  }
+  .feature-list .item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+  .feature-list .item:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .feature-list {
+    display: flex;
+  }
+  .feature-list .item {
+    width: calc((100% - 30px * 3) / 4);
+  }
+  .feature-list .item:not(:last-child) {
+    margin-right: 30px;
   }
 }
 
@@ -999,7 +1027,6 @@ button {
 @media screen and (max-width: 1199px) {
   .work {
     display: none;
-    padding-top: 0px;
   }
 }
 
@@ -1024,6 +1051,11 @@ button {
 
 .work-list .item {
   position: relative;
+  width: calc((100% -30px * 2) / 3);
+}
+
+.work-list .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .team {

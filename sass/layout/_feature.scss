@@ -7,7 +7,7 @@
   .feature-list {
     display: inline-block;
     .item {
-      flex-basis: 450px;
+      width: 100%;
     }
   }
 }
@@ -20,10 +20,30 @@
     margin-bottom: 30px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1169px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .feature-list {
     display: flex;
     flex-wrap: wrap;
+    .item {
+      width: calc((100% - 30px * 1) / 2);
+      &:not(:nth-last-child(-n + 2)) {
+        margin-bottom: 30px;
+      }
+      &:not(:nth-child(2n)) {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature-list {
+    display: flex;
+    .item {
+      width: calc((100% - 30px * 3) / 4);
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
   }
 }
 
