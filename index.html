@@ -162,8 +162,8 @@
           <ul class="work-list list">
             <li class="item">
               <img
-                src="./images/img05.jpg"
-                srcset="./images/img05@2x.jpg 2x"
+                src="./images/work-img/img05.jpg"
+                srcset="./images/work-img/img05@2x.jpg 2x"
                 alt="Десктопные приложения"
                 width="370"
                 height="294"
@@ -172,8 +172,8 @@
             </li>
             <li class="item">
               <img
-                src="./images/img06.jpg"
-                srcset="./images/img06@2x.jpg 2x"
+                src="./images/work-img/img06.jpg"
+                srcset="./images/work-img/img06@2x.jpg 2x"
                 alt="Мобильные приложения"
                 width="370"
                 height="294"
@@ -182,8 +182,8 @@
             </li>
             <li class="item">
               <img
-                src="./images/img07.jpg"
-                srcset="./images/img07@2x.jpg 2x"
+                src="./images/work-img/img07.jpg"
+                srcset="./images/work-img/img07@2x.jpg 2x"
                 alt="Дизайнерские решения"
                 width="370"
                 height="294"
@@ -199,13 +199,19 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list list">
             <li class="item">
-              <img
-                class="photo"
-                src="./images/img01.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-                height="260"
-              />
+                <picture>
+                  <source srcset="./images/team-photo/mobil/img01.jpg 1x,
+                        ./images/team-photo/mobil/img01@2x.jpg 2x" media="(max-width: 767px)" 
+                        sizes="(max-width: 767px) 450px, 100vw">
+                  <source srcset="./images/team-photo/tablet/img01.jpg 1x,
+                        ./images/team-photo/tablet/img01@2x.jpg 2x" media="(max-width: 1199px)"
+                        sizes="(max-width: 1199px) 354px, 100vw">
+                  <source srcset="./images/team-photo/desctop/img01.jpg 1x,
+                        ./images/team-photo/desctop/img01@2x.jpg 2x" media="(min-width: 1200px)"
+                        sizes="(min-width: 1200px) 270px, 100vw">
+                
+                  <img src="./images/team-photo/mobil/img01.jpg" alt="Игорь Демьяненко">
+                </picture>
               <div class="team-inform">
                 <h3 class="title">Игорь Демьяненко</h3>
                 <p class="text">Product Designer</p>
@@ -242,13 +248,19 @@
               </div>
             </li>
             <li class="item">
-              <img
-                class="photo"
-                src="./images/img02.jpg"
-                alt="Ольга Репина"
-                width="270"
-                height="260"
-              />
+                <picture>
+                  <source srcset="./images/team-photo/mobil/img02.jpg 1x,
+                                        ./images/team-photo/mobil/img02@2x.jpg 2x" media="(max-width: 767px)"
+                    sizes="(max-width: 767px) 450px, 100vw">
+                  <source srcset="./images/team-photo/tablet/img02.jpg 1x,
+                                        ./images/team-photo/tablet/img02@2x.jpg 2x" media="(max-width: 1199px)"
+                    sizes="(max-width: 1199px) 354px, 100vw">
+                  <source srcset="./images/team-photo/desctop/img02.jpg 1x,
+                                        ./images/team-photo/desctop/img02@2x.jpg 2x" media="(min-width: 1200px)"
+                    sizes="(min-width: 1200px) 270px, 100vw">
+                
+                  <img src="./images/team-photo/mobil/img02.jpg" alt="Ольга Репина">
+                </picture>
               <div class="team-inform">
                 <h3 class="title">Ольга Репина</h3>
                 <p class="text">Frontend Developer</p>
@@ -285,13 +297,19 @@
               </div>
             </li>
             <li class="item">
-              <img
-                class="photo"
-                src="./images/img03.jpg"
-                alt="Николай Тарасов"
-                width="270"
-                height="260"
-              />
+                <picture>
+                  <source srcset="./images/team-photo/mobil/img03.jpg 1x,
+                                        ./images/team-photo/mobil/img03@2x.jpg 2x" media="(max-width: 767px)"
+                    sizes="(max-width: 767px) 450px, 100vw">
+                  <source srcset="./images/team-photo/tablet/img03.jpg 1x,
+                                        ./images/team-photo/tablet/img03@2x.jpg 2x" media="(max-width: 1199px)"
+                    sizes="(max-width: 1199px) 354px, 100vw">
+                  <source srcset="./images/team-photo/desctop/img03.jpg 1x,
+                                        ./images/team-photo/desctop/img03@2x.jpg 2x" media="(min-width: 1200px)"
+                    sizes="(min-width: 1200px) 270px, 100vw">
+                
+                  <img src="./images/team-photo/mobil/img03.jpg" alt="Николай Тарасов">
+                </picture>
               <div class="team-inform">
                 <h3 class="title">Николай Тарасов</h3>
                 <p class="text">Marketing</p>
@@ -328,13 +346,18 @@
               </div>
             </li>
             <li class="item">
-              <img
-                class="photo"
-                src="./images/img04.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-                height="260"
-              />
+                <picture>
+                  <source srcset="./images/team-photo/mobil/img04.jpg 1x,
+                                        ./images/team-photo/mobil/img04@2x.jpg 2x" media="(max-width: 767px)"
+                    sizes="(max-width: 767px) 450px, 100vw">
+                  <source srcset="./images/team-photo/tablet/img04.jpg 1x,
+                                        ./images/team-photo/tablet/img04@2x.jpg 2x" media="(max-width: 1199px)"
+                    sizes="(max-width: 1199px) 354px, 100vw">
+                  <source srcset="./images/team-photo/desctop/img04.jpg 1x,
+                                        ./images/team-photo/desctop/img04@2x.jpg 2x" media="(min-width: 1200px)"
+                    sizes="(min-width: 1200px) 270px, 100vw">
+                  <img src="./images/team-photo/mobil/img04.jpg" alt="Михаил Ермаков">
+                </picture>
               <div class="team-inform">
                 <h3 class="title">Михаил Ермаков</h3>
                 <p class="text">UI Designer</p>
@@ -571,3 +594,12 @@
     <script src="./js/menu.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+

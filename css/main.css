@@ -403,10 +403,10 @@ button {
 
 .section .section-title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: #212121;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.16;
   text-align: center;
 }
@@ -417,7 +417,7 @@ button {
   margin-bottom: 10px;
   color: #212121;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.14;
   text-transform: uppercase;
 }
@@ -426,6 +426,10 @@ button {
   .section {
     padding-top: 94px;
     padding-bottom: 94px;
+  }
+  .section .section-title {
+    margin-bottom: 50px;
+    font-size: 36px;
   }
 }
 
@@ -913,6 +917,7 @@ button {
 }
 
 .hero {
+  display: block;
   width: 100%;
   letter-spacing: 0.06em;
   text-align: center;
@@ -920,7 +925,9 @@ button {
 }
 
 .hero .hero-title {
-  display: inline-block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 360px;
   margin-top: 0;
   margin-bottom: 30px;
@@ -944,15 +951,53 @@ button {
 }
 
 .overlay {
-  max-width: 480px;
   margin: 0 auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.6), rgba(47, 48, 58, 0.6)), url(../images/header.jpg);
   padding-top: 118px;
   padding-bottom: 118px;
   background-color: #c4c4c4;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 480px 400px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/header/headermobil.jpg);
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/header/headermobil@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .overlay {
+    background-size: 768px 400px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/header/headertablet.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/header/headertablet@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero .hero-title {
+    max-width: 670px;
+    font-size: 44px;
+  }
+  .overlay {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    background-size: cover;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/header/headerdesctop.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/header/headerdesctop@2x.jpg);
+  }
 }
 
 .feature-section {
@@ -1062,17 +1107,18 @@ button {
   background: #f5f4fa;
 }
 
-.team-list .item {
+.team .team-list .item {
   background: #ffffff;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-list .item:not(:nth-last-child(-n + 1)) {
-  margin-bottom: 30px;
+.team .team-list .item .team-inform {
+  padding-top: 30px;
+  padding-bottom: 24px;
 }
 
-.team-list .title {
+.team .team-list .item .title {
   margin-bottom: 10px;
   color: #212121;
   font-weight: 500;
@@ -1082,7 +1128,7 @@ button {
   text-align: center;
 }
 
-.team-list .text {
+.team .team-list .item .text {
   margin: 0;
   margin-bottom: 16px;
   font-size: 16px;
@@ -1090,14 +1136,32 @@ button {
   text-align: center;
 }
 
-.item .photo {
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
+@media screen and (max-width: 767px) {
+  .team-list .item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
-.team-inform {
-  padding-bottom: 24px;
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .team-list .item:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
+  .team-list .item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list {
+    display: flex;
+  }
+  .team-list .item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .client-list {
