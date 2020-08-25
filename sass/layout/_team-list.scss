@@ -38,16 +38,18 @@
     margin-bottom: 30px;
   }
 }
-@media screen and (max-width: 1199px) and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .team-list {
     display: flex;
     flex-wrap: wrap;
-
-    .item:not(:nth-child(2n)) {
-      margin-right: 30px;
+    & .item {
+      width: calc((100% - 30px) / 2);
     }
 
-    .item:not(:nth-last-child(-n + 2)) {
+    & .item:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+    & .item:not(:nth-last-child(-n + 2)) {
       margin-bottom: 30px;
     }
   }
@@ -55,6 +57,9 @@
 @media screen and (min-width: 1200px) {
   .team-list {
     display: flex;
+    .team {
+      width: calc((100% - 30px * 3) / 4);
+    }
 
     .item:not(:last-child) {
       margin-right: 30px;

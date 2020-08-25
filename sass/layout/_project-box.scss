@@ -14,6 +14,10 @@
   .project-list {
     display: flex;
     flex-wrap: wrap;
+    .item {
+      width: calc((100% - 30px) / 2);
+    }
+
     .item:not(:nth-child(2n)) {
       margin-right: 30px;
     }
@@ -26,6 +30,10 @@
   .project-list {
     display: flex;
     flex-wrap: wrap;
+    .item {
+      width: calc((100% - 30px * 2) / 3);
+    }
+
     .item.item:not(:nth-child(3n)) {
       margin-right: 30px;
     }

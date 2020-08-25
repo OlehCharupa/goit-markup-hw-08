@@ -963,27 +963,25 @@ button {
   background-color: #c4c4c4;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 480px 400px;
+  background-size: cover;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../images/header/headermobil.jpg);
 }
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .overlay {
-    background-size: 480px 400px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../images/header/headermobil@2x.jpg);
   }
 }
 
 @media screen and (min-width: 768px) {
   .overlay {
-    background-size: 768px 400px;
+    background-size: cover;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../images/header/headertablet.jpg);
   }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .overlay {
-    background-size: 768px 400px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../images/header/headertablet@2x.jpg);
   }
 }
@@ -1004,7 +1002,6 @@ button {
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .overlay {
-    background-size: cover;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../images/header/headerdesctop@2x.jpg);
   }
 }
@@ -1151,10 +1148,13 @@ button {
   }
 }
 
-@media screen and (max-width: 1199px) and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .team-list {
     display: flex;
     flex-wrap: wrap;
+  }
+  .team-list .item {
+    width: calc((100% - 30px) / 2);
   }
   .team-list .item:not(:nth-child(2n)) {
     margin-right: 30px;
@@ -1167,6 +1167,9 @@ button {
 @media screen and (min-width: 1200px) {
   .team-list {
     display: flex;
+  }
+  .team-list .team {
+    width: calc((100% - 30px * 3) / 4);
   }
   .team-list .item:not(:last-child) {
     margin-right: 30px;
@@ -1497,6 +1500,9 @@ button {
     display: flex;
     flex-wrap: wrap;
   }
+  .project-list .item {
+    width: calc((100% - 30px) / 2);
+  }
   .project-list .item:not(:nth-child(2n)) {
     margin-right: 30px;
   }
@@ -1509,6 +1515,9 @@ button {
   .project-list {
     display: flex;
     flex-wrap: wrap;
+  }
+  .project-list .item {
+    width: calc((100% - 30px * 2) / 3);
   }
   .project-list .item.item:not(:nth-child(3n)) {
     margin-right: 30px;

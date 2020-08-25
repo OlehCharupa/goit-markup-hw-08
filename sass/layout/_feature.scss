@@ -7,7 +7,7 @@
   .feature-list {
     display: inline-block;
     .item {
-      width: 100%;
+      width: cacl((100% - 30px) / 2);
     }
   }
 }
@@ -25,7 +25,7 @@
     display: flex;
     flex-wrap: wrap;
     .item {
-      width: calc((100% - 30px * 1) / 2);
+      width: calc((100% - 30px) / 2);
       &:not(:nth-last-child(-n + 2)) {
         margin-bottom: 30px;
       }
