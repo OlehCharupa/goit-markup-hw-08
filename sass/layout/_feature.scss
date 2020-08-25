@@ -1,13 +1,12 @@
 .feature-section {
   display: flex;
-  padding-bottom: 0;
 }
 
 @media screen and (min-width: 480px) {
   .feature-list {
     display: inline-block;
     .item {
-      width: cacl((100% - 30px) / 2);
+      width: 100%;
     }
   }
 }
@@ -36,6 +35,9 @@
   }
 }
 @media screen and (min-width: 1200px) {
+  .feature-section {
+    padding-bottom: 0;
+  }
   .feature-list {
     display: flex;
     .item {

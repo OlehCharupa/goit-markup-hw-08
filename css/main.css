@@ -1008,7 +1008,6 @@ button {
 
 .feature-section {
   display: flex;
-  padding-bottom: 0;
 }
 
 @media screen and (min-width: 480px) {
@@ -1036,7 +1035,7 @@ button {
     flex-wrap: wrap;
   }
   .feature-list .item {
-    width: calc((100% - 30px * 1) / 2);
+    width: calc((100% - 30px) / 2);
   }
   .feature-list .item:not(:nth-last-child(-n + 2)) {
     margin-bottom: 30px;
@@ -1047,6 +1046,9 @@ button {
 }
 
 @media screen and (min-width: 1200px) {
+  .feature-section {
+    padding-bottom: 0;
+  }
   .feature-list {
     display: flex;
   }
@@ -1076,7 +1078,7 @@ button {
 }
 
 @media screen and (max-width: 1199px) {
-  .work {
+  .section-work {
     display: none;
   }
 }
@@ -1466,7 +1468,7 @@ button {
     flex-wrap: wrap;
     margin-bottom: 40px;
   }
-  .filter-menu .item:not(:nth-child(3n)) {
+  .filter-menu .item {
     margin-right: 8px;
   }
   .filter-menu .item:not(:nth-last-child(-n + 2)) {
